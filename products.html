@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Produits Electronics - Think Twice</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header clearfix">
+    <div class="logo">Before You Buy <span>Think Twice</span></div>
+    <button id="burger-btn" class="burger">☰</button>
+    <nav id="nav-links" class="main-nav">
+      <a href="index.html">Home</a>
+      <a href="products.html" class="active">Products</a>
+      <a href="evaluate.html">Evaluation</a>
+      <a href="verdict.html">Verdict</a>
+      <a href="contact.html">Contact & Delivery</a>
+      <button id="theme-toggle" class="btn-small">🌓</button>
+    </nav>
+  </header>
+
+  <main class="container">
+    <h1>Catalogue Electronics (10 Products)</h1>
+    <input type="text" id="search-input" class="search-bar" placeholder="Rechercher un produit...">
+    <!-- JS injecte les 10 cartes ici -->
+    <section id="products-container" class="cards-layout clearfix"></section>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; 2026 Before You Buy, Think Twice</p>
+  </footer>
+  <script src="../shared/js/app.js"></script>
+</body>
+</html>
