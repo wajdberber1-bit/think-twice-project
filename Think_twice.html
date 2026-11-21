@@ -3,57 +3,67 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Think Twice</title>
+    <title>Before You Buy - Think Twice</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
+    <header class="site-header">
+        <div class="logo">🧠 Before You Buy</div>
+        <button id="burger-btn" class="burger-btn" aria-label="Menu">☰</button>
 
-        <header>
-            <nav>
-                <a href="Think_twice.html" class="logo">🧠 Think Twice</a>
-                <button id="burger-btn" class="burger-btn" aria-label="Menu">☰</button>
-                <button id="theme-toggle" class="theme-btn">🌙 Dark Mode</button>
+        <nav id="main-nav" class="main-nav">
+            <ul>
+                <li><a href="Think_twice.html" class="active">Think Twice</a></li>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="basket.html">Basket</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
 
-                <div id="menu" class="menu">
-                    <a href="home.html">home</a>
-                    <a href="products.html">products</a>
-                    <a href="contact.html">contact</a>
-                    <a href="review.html">review</a>
-                </div>
-            </nav>
-        </header>
+        <button id="theme-toggle" class="theme-btn">🌙 Dark Mode</button>
+    </header>
 
-        <section class="title">
-            <h1>Think Twice, Before You Buy</h1>
-            <p>
-                No more gadgets forgotten in a drawer. Before You Buy, Think Twice is your smart
-                check before buying electronics. Before spending your budget in DT, take a minute
-                to test if the product actually fits your daily life. You get a clear answer, so you spend smarter.
-            </p>
-            <a href="products.html" class="start-btn">Start now</a>
-        </section>
+    <main>
 
-        <section class="steps">
-            <div class="step">
-                <h3>✅ Buy it now</h3>
-                <p>You really need it and your budget allows it.</p>
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Before You Buy, <span class="highlight">Think Twice.</span></h1>
+                <p>
+                    No more gadgets forgotten in a drawer.
+                    Before You Buy, Think Twice is your smart check before buying electronics. Before spending your budget in DT,
+                    take a minute to test if the product actually fits your daily life. You get a clear answer—Buy it now, Wait, or You don't need it—so you spend smarter.
+                </p>
             </div>
-            <div class="step">
-                <h3>⏳ Wait</h3>
-                <p>Good idea, but not the right moment yet.</p>
-            </div>
-            <div class="step">
-                <h3>❌ You don’t need it</h3>
-                <p>Just an impulse. Keep your DT!</p>
+            <div class="hero-image">
+                <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=600&q=80" alt="Personne qui réfléchit devant son ordinateur et ses gadgets">
             </div>
         </section>
 
-        <footer>
-            <p>&copy; 2026 Think Twice</p>
-        </footer>
+        <section id="how-it-works" class="steps-section">
+            <h2>How to avoid unnecessary purchases ?</h2>
+            <div class="steps-container">
+                <article class="step-card">
+                    <div class="step-number">1</div>
+                    <h3>Select a pruduct</h3>
+                    <p>Browse our catalogue of 10 products with their price in DT.</p>
+                </article>
+                <article class="step-card">
+                    <div class="step-number">2</div>
+                    <h3>Answer the questions</h3>
+                    <p>Indicate your budget the frequency of use and the real reason for your purchase.</p>
+                </article>
+                <article class="step-card">
+                    <div class="step-number">3</div>
+                    <h3>Receive the  verdict</h3>
+                    <p>Our algorithm will say to you: <em>Buy it now</em>, <em>Wait</em>, or <em>You don't need it</em> !</p>
+                </article>
+            </div>
+        </section>
+    </main>
 
-    </div>
+    <footer class="site-footer">
+        <p>&copy; 2026 Before You Buy, Think Twice - Projet Atelier Développement Web 1 (ISET)</p>
+    </footer>
 
     <script src="app.js"></script>
 </body>
