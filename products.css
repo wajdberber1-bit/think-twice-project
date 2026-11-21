@@ -1,0 +1,97 @@
+/* ===== Page Produits ===== */
+.products-main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 5%;
+}
+
+.products-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.products-header p {
+    color: var(--text-muted);
+}
+
+/* Barre de recherche + filtre */
+.filter-bar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+    max-width: 650px;
+    margin: 1.5rem auto 0;
+}
+
+.filter-bar input,
+.filter-bar select {
+    padding: 0.7rem 1rem;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    background-color: var(--card-bg);
+    color: var(--text-color);
+    font-size: 1rem;
+}
+
+.filter-bar input  { flex: 2 1 250px; }
+.filter-bar select { flex: 1 1 150px; }
+
+/* Les cartes: flex-wrap ywalli ye3mel les colonnes wa7dou */
+.products-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: center;
+}
+
+.product-card {
+    flex: 1 1 280px;
+    max-width: 360px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 1.2rem;
+}
+
+.product-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+.product-title {
+    font-size: 1.15rem;
+    margin: 0 0 0.4rem;
+}
+
+.product-price {
+    font-weight: bold;
+    color: var(--primary);
+    margin: 0 0 0.6rem;
+}
+
+.product-desc {
+    color: var(--text-muted);
+    font-size: 0.92rem;
+    margin: 0 0 1.2rem;
+}
+
+.select-btn {
+    width: 100%;
+    padding: 0.75rem;
+    border: none;
+    border-radius: 8px;
+    background-color: var(--primary);
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.select-btn:hover {
+    background-color: var(--primary-hover);
+}

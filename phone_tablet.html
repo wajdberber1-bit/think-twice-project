@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smartphones & Tablets</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="products.css">
+</head>
+<body>
+
+    <header class="site-header">
+        <div class="logo">🧠 Before You Buy</div>
+        <button id="burger-btn" class="burger-btn" aria-label="Menu">☰</button>
+
+        <nav id="main-nav" class="main-nav">
+            <ul>
+                <li><a href="Think_twice.html" class="active">Think Twice</a></li>
+                <li><a href="acceuil.html">Home</a></li>
+                <li><a href="basket.html">Basket</a></li>
+                <li><a href="contact.html"> Contact</a></li>
+            </ul>
+        </nav>
+
+        <button id="theme-toggle" class="theme-btn">🌙 Dark Mode</button>
+    </header>
+
+    <main class="products-main">
+        <section class="products-header">
+            <h1>Electronics Catalog</h1>
+            <p>Pick one product to test whether you really need it before spending your DT.</p>
+
+            <div class="filter-bar">
+                <input type="search" id="product-search" placeholder="Search product...">
+                <select id="category-filter">
+                    <option value="all">All categories</option>
+                    <option value="audio">Audio</option>
+                    <option value="computing">Computing</option>
+                    <option value="wearables">Wearables</option>
+                    <option value="accessories">Accessories</option>
+                </select>
+            </div>
+        </section>
+
+        <!-- Les cartes yتزادو houni b JavaScript -->
+        <section id="products-list" class="products-grid"></section>
+    </main>
+
+    <footer class="site-footer">
+        <p>&copy; 2026 Before You Buy, Think Twice - Atelier Développement Web 1</p>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>

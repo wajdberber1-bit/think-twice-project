@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Before You Buy - Think Twice</title>
+    <link rel="stylesheet" href="think.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="logo">🧠 Before You Buy</div>
+
+        <input type="button" id="burger-btn" class="burger-btn" value="☰" onclick="toggleMenu()">
+
+        <nav id="main-nav" class="main-nav">
+            <ul>
+                <li><a href="think.html" class="active">Think Twice</a></li>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="basket.html">Basket</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+
+        <input type="button" id="theme-toggle" class="theme-btn" value="🌙 Dark Mode" onclick="changeTheme()">
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Before You Buy, <span class="highlight">Think Twice.</span></h1>
+                <p>
+                    No more gadgets forgotten in a drawer.
+                    Before You Buy, Think Twice is your smart check before buying electronics.
+                    Before spending your budget in DT, take a minute to test if the product
+                    actually fits your daily life. You get a clear answer, so you spend smarter.
+                </p>
+            </div>
+
+            <div class="hero-image">
+                <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&amp;fit=crop&amp;w=600&amp;q=80" alt="Person thinking in front of a computer and gadgets">
+            </div>
+        </section>
+
+        <section class="verdicts">
+            <div class="verdict">
+                <h3>✅ Buy it now</h3>
+                <p>You really need it and your budget allows it.</p>
+            </div>
+            <div class="verdict">
+                <h3>⏳ Wait</h3>
+                <p>Good idea, but not the right moment yet.</p>
+            </div>
+            <div class="verdict">
+                <h3>❌ You don’t need it</h3>
+                <p>Just an impulse. Keep your DT!</p>
+            </div>
+        </section>
+
+        <section id="how-it-works" class="steps-section">
+            <h2>How to avoid unnecessary purchases?</h2>
+
+            <div class="steps-container">
+                <article class="step-card">
+                    <div class="step-number">1</div>
+                    <h3>Select a product</h3>
+                    <p>Browse our catalogue of 10 products with their price in DT.</p>
+                </article>
+
+                <article class="step-card">
+                    <div class="step-number">2</div>
+                    <h3>Answer the questions</h3>
+                    <p>Indicate your budget, the frequency of use and the real reason for your purchase.</p>
+                </article>
+
+                <article class="step-card">
+                    <div class="step-number">3</div>
+                    <h3>Receive the verdict</h3>
+                    <p>Our algorithm will tell you: <em>Buy it now</em>, <em>Wait</em>, or <em>You don't need it</em>!</p>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>&copy; 2026 Before You Buy, Think Twice</p>
+    </footer>
+
+    <script src="think.js"></script>
+</body>
+</html>
