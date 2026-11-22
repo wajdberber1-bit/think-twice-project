@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Think Twice - Your Verdict</title>
+    <link rel="stylesheet" href="form.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="logo">🧠 Before You Buy</div>
+
+        <input type="button" id="burger-btn" class="burger-btn" value="☰" onclick="toggleMenu()">
+
+        <nav id="main-nav" class="main-nav">
+            <ul>
+                <li><a href="think.html" class="active">Think Twice</a></li>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="basket.html">Basket</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+
+        <input type="button" id="theme-toggle" class="theme-btn" value="🌙 Dark Mode" onclick="changeTheme()">
+    </header>
+
+    <main>
+        <h1>Before You Buy, <span class="highlight">Think Twice.</span></h1>
+        <p class="subtitle">Answer these questions honestly, then click on Verdict.</p>
+
+        <section class="form-card">
+            <div class="field">
+                <label for="product">Product</label>
+                <input type="text" id="product" placeholder="Product name">
+            </div>
+
+            <div class="field">
+                <label for="price">Price of the product (DT)</label>
+                <input type="number" id="price" placeholder="Example: 1200">
+            </div>
+
+            <div class="field">
+                <label for="budget">Your budget (DT)</label>
+                <input type="number" id="budget" placeholder="Example: 1500">
+            </div>
+
+            <div class="field">
+                <label for="frequency">How often will you use it?</label>
+                <select id="frequency">
+                    <option value="">Choose an answer...</option>
+                    <option value="3">Every day</option>
+                    <option value="2">Several times a week</option>
+                    <option value="1">A few times a month</option>
+                    <option value="0">Rarely</option>
+                </select>
+            </div>
+
+            <div class="field">
+                <label for="reason">What is the real reason for your purchase?</label>
+                <select id="reason">
+                    <option value="">Choose an answer...</option>
+                    <option value="3">I really need it (study, work, mine is broken)</option>
+                    <option value="2">My current one is old and slow</option>
+                    <option value="1">I just like it or it is on sale</option>
+                    <option value="0">Everyone has it, it is a trend</option>
+                </select>
+            </div>
+
+            <div class="field">
+                <label for="own">Do you already have a similar product?</label>
+                <select id="own">
+                    <option value="">Choose an answer...</option>
+                    <option value="0">Yes, I already have one</option>
+                    <option value="1">No, I don't</option>
+                </select>
+            </div>
+
+            <p id="error" class="error hidden">Please answer all the questions first.</p>
+
+            <input type="button" class="verdict-btn" value="Verdict" onclick="showVerdict()">
+        </section>
+
+        <section id="result" class="result hidden">
+            <h2 id="result-title"></h2>
+            <p id="result-text"></p>
+
+            <h3>Your choice</h3>
+            <div class="choices">
+                <input type="button" class="choice-btn" value="🛒 Buy" onclick="buyNow()">
+                <input type="button" class="choice-btn" value="🧺 Add to basket" onclick="addToBasket()">
+                <input type="button" class="choice-btn" value="🚫 I won't buy it " onclick="wontbuy()">
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>&copy; 2026 Before You Buy, Think Twice</p>
+    </footer>
+
+    <script src="form.js"></script>
+</body>
+</html>

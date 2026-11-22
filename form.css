@@ -1,0 +1,256 @@
+:root {
+    --bg: #ffffff;
+    --card: #f4f6fa;
+    --text: #0a0a0a;
+    --gris: #4b5563;
+    --accent: #1e3a8a;
+    --bordure: #dbe1ec;
+    --header: #000000;
+}
+body.dark {
+    --bg: #000000;
+    --card: #0a1a3a;
+    --text: #ffffff;
+    --gris: #a8b3cc;
+    --accent: #2f56d6;
+    --bordure: #1b2c52;
+    --header: #0a1f44;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.site-header {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    gap: 16px;
+    padding: 14px 24px;
+    background-color: var(--header);
+    color: white;
+}
+
+.logo {
+    font-weight: bold;
+    font-size: 1.3rem;
+}
+
+.main-nav {
+    justify-self: end;
+}
+
+.main-nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-auto-flow: column;
+    gap: 15px;
+}
+
+.main-nav a {
+    display: block;
+    padding: 6px 10px;
+    border-radius: 8px;
+    color: #cbd5e1;
+}
+
+.main-nav a.active,
+.main-nav a:hover {
+    background-color: var(--accent);
+    color: white;
+}
+
+.burger-btn,
+.theme-btn {
+    background: none;
+    border: 1px solid #475569;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.burger-btn {
+    display: none;
+}
+
+/* ===== Contenu ===== */
+main {
+    max-width: 700px;
+    margin: auto;
+    padding: 24px;
+    text-align: center;
+}
+
+main h1 {
+    font-size: 2.2rem;
+    margin-bottom: 5px;
+}
+
+.highlight {
+    color: var(--accent);
+}
+
+.subtitle {
+    color: var(--gris);
+    margin-bottom: 30px;
+}
+
+.hidden {
+    display: none;
+}
+
+/* ===== Formulaire ===== */
+.form-card,
+.result {
+    background-color: var(--card);
+    border: 1px solid var(--bordure);
+    border-radius: 14px;
+    padding: 24px;
+    text-align: left;
+}
+
+.field {
+    margin-bottom: 18px;
+}
+
+.field label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 6px;
+}
+
+.field input,
+.field select {
+    width: 100%;
+    padding: 10px;
+    background-color: var(--bg);
+    color: var(--text);
+    border: 1px solid var(--bordure);
+    border-radius: 8px;
+    font-size: 1rem;
+}
+
+.error {
+    color: #dc2626;
+    font-weight: bold;
+}
+
+.verdict-btn {
+    width: 100%;
+    padding: 12px;
+    background-color: var(--accent);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.verdict-btn:hover {
+    opacity: 0.9;
+}
+
+/* ===== Resultat ===== */
+.result {
+    margin-top: 24px;
+    text-align: center;
+    border-left: 8px solid var(--accent);
+}
+
+.result h2 {
+    margin-top: 0;
+}
+
+.result p {
+    color: var(--gris);
+}
+
+.result.buy {
+    border-left-color: #16a34a;
+}
+
+.result.wait {
+    border-left-color: #d97706;
+}
+
+.result.no {
+    border-left-color: #dc2626;
+}
+
+/* ===== Your choice ===== */
+.choices {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 12px;
+}
+
+.choice-btn {
+    padding: 12px;
+    background-color: var(--accent);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.choice-btn:hover {
+    opacity: 0.9;
+}
+
+.site-footer {
+    text-align: center;
+    padding: 20px;
+    margin-top: 30px;
+    color: var(--gris);
+    border-top: 1px solid var(--bordure);
+    font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+    .site-header {
+        grid-template-columns: 1fr auto auto;
+    }
+
+    .burger-btn {
+        display: block;
+    }
+
+    .main-nav {
+        display: none;
+        grid-column: 1 / -1;
+        justify-self: stretch;
+        order: 5;
+    }
+
+    .main-nav.open {
+        display: block;
+    }
+
+    .main-nav ul {
+        grid-auto-flow: row;
+    }
+
+    main h1 {
+        font-size: 1.8rem;
+    }
+}
